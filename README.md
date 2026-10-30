@@ -1,5 +1,12 @@
 # lowkey
 
+**Live site: https://retroul.github.io/lowkey/**
+
+<p>
+  <img src=".github/screenshot-light.png" alt="lowkey in light mode: the headline “privacy tools, sorted” next to a bar chart of tools per section" width="49%">
+  <img src=".github/screenshot-dark.png" alt="The same page in dark mode" width="49%">
+</p>
+
 A directory of 260+ privacy tools, sorted by the job they do. It mixes two ideas: privacytools.io's "replace this app" lists with a note on why each tool made it, and Techlore's filter chips for device, price, license and setup.
 
 Plain HTML, CSS and JavaScript. No build step, no dependencies, and no requests to anyone else's server (the Archivo font is in `fonts/`).
