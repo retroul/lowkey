@@ -1,0 +1,30 @@
+name: Report a problem
+description: A broken link, out-of-date info, a tool that's gone bad, or a bug on the site.
+title: "Problem: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What's wrong?
+      options:
+        - Broken or moved link
+        - Info is out of date (price, platforms, license)
+        - Tool was sold, abandoned or caught doing something shady
+        - Something on the site doesn't work
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Which tool or part of the site?
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: A source link helps a lot (news story, changelog, issue tracker).
+    validations:
+      required: true

@@ -117,7 +117,7 @@ h1 { font-size: var(--text-display); line-height: 0.9; }
   font-variant-numeric: tabular-nums;
 }
 
-/* ---------- N13 bar ---------- */
+/* ---------- top bar ---------- */
 
 .bar {
   position: sticky; top: 0; z-index: var(--z-sticky);
@@ -538,6 +538,8 @@ h1 { font-size: var(--text-display); line-height: 0.9; }
 .criteria__grid { display: grid; gap: var(--space-xl); }
 .criteria__head { display: grid; gap: var(--space-md); }
 .criteria__head p { max-width: 30rem; color: var(--color-muted); }
+.criteria__head a, .colophon a { color: var(--color-ink); font-weight: 600; text-underline-offset: 3px; }
+.criteria__head a:hover, .colophon a:hover { color: var(--color-accent); }
 .matrix { display: grid; border-top: var(--rule-ink) solid var(--color-ink); }
 .matrix li { display: grid; gap: var(--space-xs); align-content: start; padding: var(--space-lg) var(--space-lg) var(--space-lg) 0; border-bottom: var(--rule-hair) solid var(--color-rule-2); }
 .matrix li::before { content: ""; width: 0.75rem; height: 0.75rem; background: var(--color-ink); }
@@ -557,7 +559,7 @@ h1 { font-size: var(--text-display); line-height: 0.9; }
   .criteria__warn { grid-column: 5 / span 7; }
 }
 
-/* ---------- Ft4 colophon ---------- */
+/* ---------- footer ---------- */
 
 .colophon {
   border-top: var(--rule-ink) solid var(--color-ink);

@@ -33,6 +33,11 @@ The check catches bad platform names, unknown trait or swap keys, non-https link
 - `js/app.js` builds the list, filters, table view and search
 - `favicon.svg` the keyhole mark (it sits low in the square: a low key); `apple-touch-icon.png` is the same mark at 180 px for phone home screens
 - `fonts/` Archivo, SIL Open Font License (`fonts/OFL.txt`)
+- `og.png` the preview image shown when the link is shared
+
+## Suggest a tool or report a problem
+
+Open an issue: https://github.com/retroul/lowkey/issues/new/choose. There's a form for each. A link to a source (audit, changelog, news story) helps.
 
 ## Light and dark
 
@@ -41,3 +46,7 @@ The page follows the device's light or dark setting. The half-circle button in t
 ## Keyboard
 
 `/` or Ctrl+K opens search. Esc clears filters. Filters are saved in the address bar, so a copied link keeps the view.
+
+## License
+
+MIT, see `LICENSE`. The Archivo font is under its own license, the SIL Open Font License (`fonts/OFL.txt`).
