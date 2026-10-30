@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="lowkey · privacy tools, sorted">
+  <meta property="og:description" content="260+ privacy tools, sorted by the job they do. Filter by device, price and setup, or start from the app you want to leave.">
+  <meta name="twitter:card" content="summary">
+  <title>lowkey · privacy tools, sorted</title>
+  <meta name="description" content="A hand-picked directory of privacy tools: browsers, messengers, email, passwords and more. Filter by device, price and setup, or start from the app you want to leave.">
+  <meta name="theme-color" content="#fbfcfe" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111318" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/site.css">
+  <noscript><link rel="stylesheet" href="css/noscript.css"></noscript>
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#directory">Skip to the tools</a>
+
+  <header class="bar">
+    <div class="shell bar__inner">
+      <a class="wordmark" href="#top" aria-label="lowkey, back to top"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M0 0H32V32H0Z M16 12.75A4.75 4.75 0 0 1 18.2 21.71L19.5 26.5H12.5L13.8 21.71A4.75 4.75 0 0 1 16 12.75Z"/></svg>lowkey</a>
+      <button class="find" data-js type="button" id="find-open" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K">
+        <span class="find__glass" aria-hidden="true"></span>
+        <span class="find__text">Search <span data-count>261</span> tools</span>
+        <kbd class="find__kbd" aria-hidden="true">/</kbd>
+      </button>
+      <nav class="bar__links" aria-label="Sections">
+        <a href="#swap" data-js>Swap</a>
+        <a href="#start">Start</a>
+        <a href="#criteria">Criteria</a>
+      </nav>
+      <button class="theme" data-js type="button" id="theme" aria-pressed="false" aria-label="Dark mode" title="Switch light and dark">
+        <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.75" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.25a6.75 6.75 0 0 0 0 13.5z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="band hero" aria-labelledby="hero-title">
+      <div class="shell hero__grid">
+        <div class="hero__text">
+          <h1 id="hero-title">privacy tools, sorted<span class="period" aria-hidden="true"></span></h1>
+          <p class="lede">
+            <span data-count>261</span> tools that collect less about you, grouped by the job they do.
+            Filter by your devices, your budget and how much setup you’ll put up with, or start from the app you’re trying to leave.
+          </p>
+          <p class="hero__meta">List compiled <time data-compiled>2026-10-30</time>. No ads, no affiliate links, nothing loaded from anyone else’s server.</p>
+        </div>
+        <figure class="steps" data-js aria-labelledby="steps-cap">
+          <ol class="steps__list" id="steps"></ol>
+          <figcaption id="steps-cap" class="label">Tools per section</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="band swap" data-js id="swap" aria-labelledby="swap-title">
+      <div class="shell swap__grid">
+        <div class="swap__head">
+          <h2 id="swap-title" class="section-title">leave something behind</h2>
+          <p>Pick what you use now and the directory narrows to things that do the same job.</p>
+        </div>
+        <div class="swap__arrow" aria-hidden="true"><span></span></div>
+        <ul class="swap__list" id="swaps" aria-label="Apps to replace"></ul>
+      </div>
+    </section>
+
+    <section class="plate" id="start" aria-labelledby="start-title">
+      <div class="shell">
+        <span class="numeral numeral--plate" aria-hidden="true">5</span>
+        <h2 id="start-title" class="section-title">start with five</h2>
+        <p class="plate__lede">If you change nothing else this year, change these. Each one takes under an afternoon.</p>
+        <ol class="kit">
+          <li class="kit__cell">
+            <span class="label">Browse</span>
+            <a href="#t-browsers-firefox" data-jump>Firefox</a>
+            <p>With uBlock Origin installed and tracking protection on Strict. Brave if you’d rather not configure anything.</p>
+          </li>
+          <li class="kit__cell">
+            <span class="label">Passwords</span>
+            <a href="#t-passwords-bitwarden" data-jump>Bitwarden</a>
+            <p>One strong password to remember, a different random one everywhere else.</p>
+          </li>
+          <li class="kit__cell">
+            <span class="label">Messages</span>
+            <a href="#t-messengers-signal" data-jump>Signal</a>
+            <p>The one your family will actually install.</p>
+          </li>
+          <li class="kit__cell">
+            <span class="label">Search</span>
+            <a href="#t-search-brave-search" data-jump>Brave Search</a>
+            <p>Set it as the default and forget about it.</p>
+          </li>
+          <li class="kit__cell">
+            <span class="label">Sign-ups</span>
+            <a href="#t-aliases-simplelogin" data-jump>SimpleLogin</a>
+            <p>A fresh address for every shop and newsletter, so a leak points straight at whoever leaked it.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="band directory" id="directory" aria-labelledby="dir-title" tabindex="-1">
+      <div class="shell">
+        <h2 id="dir-title" class="section-title">the directory</h2>
+
+        <div class="filters" id="filters" data-js>
+          <details class="filters__fold" id="filters-fold" open>
+            <summary class="filters__summary">Filters <span class="filters__on" id="filters-on"></span></summary>
+            <div class="filters__body" id="filter-groups"></div>
+          </details>
+          <div class="filters__tail">
+            <p class="filters__count" id="count" role="status" aria-live="polite"></p>
+            <div class="view" role="group" aria-label="View">
+              <button type="button" class="chip" data-view="list" aria-pressed="true">List</button>
+              <button type="button" class="chip" data-view="table" aria-pressed="false">Table</button>
+            </div>
+            <button type="button" class="reset" id="reset" disabled>Reset <kbd aria-hidden="true">esc</kbd></button>
+          </div>
+        </div>
+
+        <p class="swap-note" id="swap-note" hidden></p>
+
+        <noscript>
+          <p class="noscript"><strong>The list needs JavaScript to show up.</strong> It’s one small script from this site, with nothing loaded from anyone else. If you have scripts off (NoScript, or Tor Browser on Safest), allow this site, or read the raw list in <a href="js/data.js">js/data.js</a>.</p>
+        </noscript>
+
+        <div class="dir" data-js>
+          <nav class="dir__index" aria-label="Categories">
+            <ol id="index">
+              <li class="idx__status"><span id="index-count"></span><a href="#filters" data-to-filters>Filters</a></li>
+            </ol>
+          </nav>
+          <div class="dir__body" id="categories"></div>
+        </div>
+
+        <div class="empty" id="empty" hidden>
+          <p class="empty__title">nothing fits all of that<span class="period" aria-hidden="true"></span></p>
+          <p>Try dropping a filter. Platform and price together rule out the most.</p>
+          <button type="button" class="chip" data-reset>Clear filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="band criteria" id="criteria" aria-labelledby="criteria-title">
+      <div class="shell criteria__grid">
+        <div class="criteria__head">
+          <h2 id="criteria-title" class="section-title">how a tool gets in</h2>
+          <p>Every pick comes from reading the project’s own docs, published audits and issue tracker. Nobody paid to be here or to be left off. Every category also says what it looks for, right above its list.</p>
+        </div>
+        <ul class="matrix">
+          <li><span class="label">Encryption</span><p>If the company can read your data, assume it eventually will. Tools that hold your stuff should only ever see it scrambled.</p></li>
+          <li><span class="label">Source</span><p>Open source wins ties. It doesn’t make a tool safe, but it means people outside the company can check.</p></li>
+          <li><span class="label">Money</span><p>We look for a business model you can see: you pay, donors pay, or it’s free software. Free with no visible income usually means you’re what’s for sale.</p></li>
+          <li><span class="label">Upkeep</span><p>A release in the last year and a public history of fixing security bugs. Abandoned tools come off, even good ones.</p></li>
+          <li><span class="label">Record</span><p>When police or hackers showed up, was there anything to take? A company caught keeping data it promised not to keep gets cut.</p></li>
+          <li><span class="label">Setup</span><p>Labelled honestly. Easy means install and go. Advanced means you’ll read documentation and probably break something once.</p></li>
+        </ul>
+        <p class="criteria__warn">Tools change owners, policies and code. Before you trust one with anything that matters, read its current privacy policy on its own site.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="shell">
+      <p><span class="wordmark wordmark--small"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M0 0H32V32H0Z M16 12.75A4.75 4.75 0 0 1 18.2 21.71L19.5 26.5H12.5L13.8 21.71A4.75 4.75 0 0 1 16 12.75Z"/></svg>lowkey</span> A static page with no cookies, no analytics and no third-party requests; the only font, Archivo (SIL Open Font License), is served from this site. Filters live in the address bar, so a link keeps the view you shared. Not connected to any project listed. Tool names belong to their owners. List compiled <time data-compiled>2026-10-30</time>. The search shortcut is <kbd>/</kbd>, and <kbd>esc</kbd> clears filters.</p>
+    </div>
+  </footer>
+
+  <dialog class="finder" id="finder" aria-labelledby="finder-label">
+    <div class="finder__field">
+      <label id="finder-label" for="finder-input" class="visually-hidden">Search tools</label>
+      <span class="find__glass" aria-hidden="true"></span>
+      <input id="finder-input" type="search" autocomplete="off" spellcheck="false" placeholder="Tool, job, or app to replace"
+        role="combobox" aria-expanded="true" aria-controls="finder-results" aria-autocomplete="list">
+      <kbd aria-hidden="true">esc</kbd>
+    </div>
+    <ul class="finder__results" id="finder-results" role="listbox" aria-label="Results"></ul>
+    <p class="finder__foot label" aria-hidden="true"><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> move</span><span><kbd>&crarr;</kbd> open</span><span><kbd>esc</kbd> close</span></p>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* Every colour and font in site.css comes from here. */
+
+@font-face {
+  font-family: "Archivo";
+  src: url("../fonts/archivo.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* paper and ink, tinted toward the ultramarine anchor (hue 255–264) */
+  --color-paper:   oklch(99% 0.003 255);
+  --color-paper-2: oklch(97.2% 0.005 255);
+  --color-paper-3: oklch(94.5% 0.007 255);
+  --color-rule:    oklch(90% 0.008 255);
+  --color-rule-2:  oklch(80% 0.010 255);
+  --color-muted:   oklch(46% 0.014 255);
+  --color-ink:     oklch(16% 0.010 255);
+
+  /* the one signal ink */
+  --color-accent:     oklch(45% 0.19 264);
+  --color-accent-ink: oklch(99% 0.003 255);
+  --color-focus:      oklch(45% 0.19 264);
+
+  /* the "start with five" plate: its own pair, so dark mode can brighten the accent
+     for text without turning the whole plate into a bright block */
+  --color-plate:     var(--color-accent);
+  --color-plate-ink: var(--color-accent-ink);
+
+  /* plate-only alphas: rails and numerals laid over the accent */
+  --color-plate-rail:    oklch(99% 0.003 255 / 0.16);
+  --color-plate-rule:    oklch(99% 0.003 255 / 0.35);
+  --color-plate-numeral: oklch(99% 0.003 255 / 0.12);
+  --color-numeral:       oklch(16% 0.010 255 / 0.07);
+  --color-scrim:         oklch(16% 0.010 255 / 0.45);
+
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body:    "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --display-weight: 800;
+  --tracking-display: -0.045em;
+  --tracking-label: 0.09em;
+
+  --text-label: 0.75rem;
+  --text-sm:    0.875rem;
+  --text-md:    1rem;
+  --text-lg:    1.25rem;
+  --text-xl:    clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
+  --text-kit:   clamp(1.375rem, 0.5rem + 1.3vw, 1.75rem);
+  --text-2xl:   clamp(2rem, 1.2rem + 3.4vw, 3.5rem);
+  --text-section: clamp(2.75rem, 1.2rem + 6.5vw, 6rem);
+  --text-display: clamp(3.25rem, 10.5vw, 8.5rem);
+  --text-numeral: clamp(7.5rem, 22vw, 20rem);
+
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --shell: 80rem;
+  --bar-h: 3.75rem;
+
+  --rule-hair: 1px;
+  --rule-ink: 2px;
+  --rule-bar: 3px;
+  --radius-card: 0;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 200ms;
+  --dur-long: 420ms;
+
+  --z-raised: 10;
+  --z-sticky: 200;
+  --z-modal: 400;
+
+  color-scheme: light;
+}
+
+/* Dark mode. Follows the device until someone uses the switch (js/theme.js sets data-theme).
+ * The same values appear twice: once for "device says dark", once for "chose dark". */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-paper:   oklch(17% 0.012 260);
+    --color-paper-2: oklch(20.5% 0.014 260);
+    --color-paper-3: oklch(24.5% 0.017 260);
+    --color-rule:    oklch(30% 0.017 260);
+    --color-rule-2:  oklch(43% 0.018 260);
+    --color-muted:   oklch(74% 0.014 255);
+    --color-ink:     oklch(95% 0.006 255);
+    --color-accent:     oklch(72% 0.13 264);
+    --color-accent-ink: oklch(17% 0.012 260);
+    --color-focus:      oklch(72% 0.13 264);
+    --color-plate:      oklch(38% 0.17 264);
+    --color-plate-ink:  oklch(97% 0.006 255);
+    --color-numeral:    oklch(95% 0.006 255 / 0.06);
+    --color-scrim:      oklch(5% 0.01 260 / 0.65);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --color-paper:   oklch(17% 0.012 260);
+  --color-paper-2: oklch(20.5% 0.014 260);
+  --color-paper-3: oklch(24.5% 0.017 260);
+  --color-rule:    oklch(30% 0.017 260);
+  --color-rule-2:  oklch(43% 0.018 260);
+  --color-muted:   oklch(74% 0.014 255);
+  --color-ink:     oklch(95% 0.006 255);
+  --color-accent:     oklch(72% 0.13 264);
+  --color-accent-ink: oklch(17% 0.012 260);
+  --color-focus:      oklch(72% 0.13 264);
+  --color-plate:      oklch(38% 0.17 264);
+  --color-plate-ink:  oklch(97% 0.006 255);
+  --color-numeral:    oklch(95% 0.006 255 / 0.06);
+  --color-scrim:      oklch(5% 0.01 260 / 0.65);
+  color-scheme: dark;
+}

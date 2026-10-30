@@ -1,0 +1,4 @@
+/* Loaded only when JavaScript is off (see the <noscript> in index.html's head).
+ * Hides controls and lists that a script builds, so nothing on the page looks broken.
+ * !important because these elements set their own display in site.css. */
+[data-js] { display: none !important; }
